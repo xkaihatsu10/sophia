@@ -3,224 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Sophiaは、ChatGPT APIを活用した革新的な英単語学習アプリです。AIが瞬時に語句情報を生成し、効率的な学習をサポートします。">
-    <meta name="theme-color" content="#8B5CF6">
-    <title>Sophia - AIで効率的に英単語を学ぼう</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <title>Sophia - AIパーソナライズド英単語学習</title>
+    <link rel="stylesheet" href="sophia-landing-page-css.css">
 </head>
 <body>
-    <div class="loader">
-        <div class="loader__spinner"></div>
-    </div>
-
-    <header class="header">
-        <div class="container">
-            <div class="header__inner">
-                <a href="#" class="logo">
-                    <h1>Sophia</h1>
-                </a>
-                <nav class="nav">
-                    <button class="nav__toggle" aria-label="メニュー">
-                        <span></span>
-                    </button>
-                    <ul class="nav__menu">
-                        <li><a href="#about" class="nav__link">概要</a></li>
-                        <li><a href="#features" class="nav__link">特徴</a></li>
-                        <li><a href="#privacy" class="nav__link">プライバシー</a></li>
-                        <li><a href="#contact" class="nav__link">お問い合わせ</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
+    <header>
+        <nav>
+            <div class="logo">Sophia</div>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#privacy">Privacy</a></li>
+                <li><a href="#terms">Terms</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
-
     <main>
-        <section class="hero">
-            <div class="container">
-                <div class="hero__content">
-                    <div class="hero__text" data-aos="fade-up">
-                        <h2 class="hero__title">
-                            AIで英単語学習を<br>
-                            <span class="gradient-text">もっと効率的に</span>
-                        </h2>
-                        <p class="hero__subtitle">
-                            ChatGPT搭載で、単語を入力するだけで<br>
-                            定義、例文、解説を瞬時に生成
-                        </p>
-                    </div>
-                    <div class="hero__image" data-aos="fade-up" data-aos-delay="200">
-                        <img src="aaa.png" alt="Sophiaアプリのスクリーンショット" width="375" height="812">
-                        <div class="hero__image-accent"></div>
-                    </div>
-                </div>
-                <div class="hero__bg-pattern"></div>
+        <section id="hero" class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">Sophia</h1>
+                <p class="subtitle">AIパーソナライズド英単語学習</p>
+                <p>忘却曲線に基づいた最適なタイミングで、あなたの学習をサポート</p>
+            </div>
+            <div class="hero-image-container">
+                <img src="sophia-app-screen.jpg" alt="Sophia アプリのスクリーンショット" class="hero-image">
             </div>
         </section>
 
+        <section id="about" class="about">
+            <h2>About Sophia</h2>
+            <p>Sophiaは、AIを活用して一人ひとりの学習パターンに最適化された英単語学習アプリです。忘却曲線に基づいた復習タイミングの提案と、ChatGPTを活用した例文生成により、効率的な学習をサポートします。</p>
+        </section>
+
         <section id="features" class="features">
-            <div class="container">
-                <div class="section__header" data-aos="fade-up">
-                    <span class="section__subtitle">Features</span>
-                    <h2 class="section__title">アプリの特徴</h2>
+            <h2>Features</h2>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <h3>AI駆動の学習最適化</h3>
+                    <p>あなたの学習パターンを分析し、最適な復習タイミングを提案</p>
                 </div>
-
-                <div class="features__grid">
-                    <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
-                        <div class="feature-card__icon">
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
-                            </svg>
-                        </div>
-                        <h3 class="feature-card__title">AIを活用した学習</h3>
-                        <p class="feature-card__text">
-                            ChatGPT APIを使用して、単語の意味や用法を詳しく解説。コンテキストに応じた例文で、実践的な使い方を学べます。
-                        </p>
-                    </div>
-
-                    <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
-                        <div class="feature-card__icon">
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                            </svg>
-                        </div>
-                        <h3 class="feature-card__title">忘却曲線に基づく復習</h3>
-                        <p class="feature-card__text">
-                            エビングハウスの忘却曲線に基づいて最適なタイミングで復習を提案。効率的に記憶を定着させます。
-                        </p>
-                    </div>
-
-                    <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
-                        <div class="feature-card__icon">
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
-                            </svg>
-                        </div>
-                        <h3 class="feature-card__title">シンプルな操作性</h3>
-                        <p class="feature-card__text">
-                            複雑な設定は一切不要。単語を入力してボタンを押すだけの直感的な操作で、すぐに学習を始められます。
-                        </p>
-                    </div>
+                <div class="feature-item">
+                    <h3>リアルタイム例文生成</h3>
+                    <p>ChatGPTによる、コンテキストに応じた自然な例文の提供</p>
+                </div>
+                <div class="feature-item">
+                    <h3>効率的な復習システム</h3>
+                    <p>忘却曲線に基づいた科学的な学習スケジュール</p>
                 </div>
             </div>
         </section>
 
         <section id="privacy" class="privacy">
-            <div class="container">
-                <div class="section__header" data-aos="fade-up">
-                    <span class="section__subtitle">Privacy Policy</span>
-                    <h2 class="section__title">プライバシーポリシー</h2>
-                </div>
+            <h2>プライバシーポリシー</h2>
+            <p>Sophiaは、ユーザーのプライバシー保護を最優先事項としています。以下に、データの収集と使用に関する方針を記載します：</p>
+            
+            <div class="policy-details">
+                <h3>データの収集と使用</h3>
+                <ul>
+                    <li>学習データ：単語の学習履歴、復習タイミング、正答率などの学習関連データを収集します</li>
+                    <li>アプリの使用状況：アプリの利用頻度、機能の使用状況などの分析データを収集します</li>
+                </ul>
 
-                <div class="privacy__content" data-aos="fade-up">
-                    <div class="privacy-card">
-                        <section class="privacy-section">
-                            <h3>1. はじめに</h3>
-                            <p>本プライバシーポリシーは、Sophiaアプリ（以下「本アプリ」）における、ユーザーの個人情報およびデータの取り扱いについて説明するものです。</p>
-                        </section>
+                <h3>広告について</h3>
+                <p>当アプリではGoogle AdMobを使用して広告を配信しています。AdMobは広告表示のために以下の情報を収集する場合があります：</p>
+                <ul>
+                    <li>デバイス情報</li>
+                    <li>位置情報</li>
+                    <li>広告ID</li>
+                </ul>
+                <p>詳細は<a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer">Google広告ポリシー</a>をご確認ください。</p>
 
-                        <section class="privacy-section">
-                            <h3>2. 収集する情報</h3>
-                            <ul>
-                                <li>ユーザーが入力した英単語とその学習データ</li>
-                                <li>アプリの利用状況や学習進捗データ</li>
-                                <li>デバイス情報（OSのバージョン、デバイスの種類など）</li>
-                                <li>広告IDおよび関連する広告データ</li>
-                            </ul>
-                        </section>
+                <h3>OpenAI APIの使用について</h3>
+                <p>当アプリではOpenAI APIを使用して例文生成などの機能を提供しています。APIの使用にあたり、以下の情報がOpenAIに送信されます：</p>
+                <ul>
+                    <li>ユーザーが学習する単語</li>
+                    <li>例文生成のためのコンテキスト情報</li>
+                </ul>
+                <p>送信されたデータの取り扱いについては、<a href="https://openai.com/policies/privacy-policy" target="_blank" rel="noopener noreferrer">OpenAIのプライバシーポリシー</a>をご確認ください。</p>
+            </div>
+        </section>
 
-                        <section class="privacy-section">
-                            <h3>3. 第三者サービスの利用について</h3>
-                            
-                            <div class="privacy-subsection">
-                                <h4>OpenAI（ChatGPT API）</h4>
-                                <p>本アプリでは、英単語の説明生成のためにOpenAI社のChatGPT APIを使用しています。APIの使用に際して：</p>
-                                <ul>
-                                    <li>ユーザーが入力した英単語はOpenAIのサーバーに送信されます</li>
-                                    <li>送信されたデータはOpenAIのプライバシーポリシーに従って処理されます</li>
-                                </ul>
-                            </div>
-
-                            <div class="privacy-subsection">
-                                <h4>Google AdMob</h4>
-                                <p>本アプリでは、広告配信のためにGoogle AdMobを使用しています：</p>
-                                <ul>
-                                    <li>広告IDを使用して、ユーザーの興味・関心に基づいた広告を表示することがあります</li>
-                                    <li>収集された情報はGoogleのプライバシーポリシーに従って処理されます</li>
-                                    <li>広告設定は端末の設定から管理できます</li>
-                                </ul>
-                            </div>
-                        </section>
-                    </div>
-                </div>
+        <section id="terms" class="terms">
+            <h2>利用規約</h2>
+            <div class="terms-content">
+                <p>本アプリの利用にあたっては、以下の規約に同意いただく必要があります：</p>
+                <ul>
+                    <li>本アプリは13歳以上のユーザーを対象としています</li>
+                    <li>本アプリの機能やコンテンツの無断複製・転載は禁止されています</li>
+                    <li>サービスの品質向上のため、予告なくアップデートや機能の変更を行う場合があります</li>
+                </ul>
             </div>
         </section>
 
         <section id="contact" class="contact">
-            <div class="container">
-                <div class="section__header" data-aos="fade-up">
-                    <span class="section__subtitle">Contact</span>
-                    <h2 class="section__title">お問い合わせ</h2>
-                </div>
-                
-                <div class="contact__content" data-aos="fade-up">
-                    <p class="contact__text">
-                        プライバシーポリシーに関するご質問やご意見、その他のお問い合わせは、以下のフォームよりお願いいたします。
-                    </p>
-                    <a href="https://docs.google.com/forms/d/1IjK2pAUfKeZrogbrVGv21RYnOfveQJjE8xqTxvyuuWA/edit" 
-                       class="button button--primary" 
-                       target="_blank" 
-                       rel="noopener noreferrer">
-                        お問い合わせフォーム
-                    </a>
-                </div>
-            </div>
+            <a href="mailto:contact@sophia-app.com" class="contact-button">お問い合わせはこちらから</a>
         </section>
     </main>
-
-    <footer class="footer">
-        <div class="container">
-            <p class="footer__copyright">&copy; 2024 Sophia. All rights reserved.</p>
-        </div>
+    <footer>
+        <p>&copy; 2024 Sophia. All rights reserved.</p>
     </footer>
-
-    <script>
-        // ローダーの制御
-        window.addEventListener('load', () => {
-            document.querySelector('.loader').classList.add('is-loaded');
-        });
-
-        // ナビゲーションの制御
-        const navToggle = document.querySelector('.nav__toggle');
-        const navMenu = document.querySelector('.nav__menu');
-        const header = document.querySelector('.header');
-
-        navToggle.addEventListener('click', () => {
-            navToggle.classList.toggle('is-active');
-            navMenu.classList.toggle('is-active');
-        });
-
-        window.addEventListener('scroll', () => {
-            header.classList.toggle('is-scrolled', window.scrollY > 50);
-        });
-
-        // スムーススクロール
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    navToggle.classList.remove('is-active');
-                    navMenu.classList.remove('is-active');
-                    window.scrollTo({
-                        top: target.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-    </script>
 </body>
 </html>
