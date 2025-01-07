@@ -124,6 +124,37 @@ header {
     margin-bottom: 3rem;
 }
 
+/* お問い合わせセクション */
+.contact-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.contact-description {
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    color: var(--text-color);
+}
+
+.contact-button-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+/* ヒーロー画像の設定 */
+.hero-image img {
+    width: 428px;
+    height: auto;
+    max-width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
 .features-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
